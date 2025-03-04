@@ -38,6 +38,22 @@ export default function GalleryPage() {
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-1">
+                <div className="absolute inset-0 z-0">
+                      <div className="absolute inset-0 
+                      bg-gradient-radial
+                       from-black via-transparent
+                        to-black opacity-10">
+                          
+                        <Image
+                          alt="Background02"
+                          src="/background/backg-05.jpg"
+                        //   layout="fill"
+                        //   objectFit="cover"
+                        //   quality={100}
+                        //   style={{ opacity: 0.9 }}
+                        />
+                      </div>
+                    </div>
       <h1 className="text-4xl font-bold mb-8">Galería de Arte</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         {inc_works.map((image, index) => (
