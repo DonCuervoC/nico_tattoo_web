@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint-disable prettier/prettier */
 import {
   Navbar as HeroUINavbar,
@@ -9,52 +10,26 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar";
 // import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
+
 import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
+
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 
-import { fontRoboto, fontOpenSans, merriweather } from '../config/fonts';
-
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
   // HeartFilledIcon,
-  SearchIcon,
+  // SearchIcon,
   Logo,
-  HeartFilledIcon,
+
 } from "@/components/icons";
-import { Button } from "@heroui/button";
 
 import { socials } from "@/config/site";
 
 
 export const Navbar = () => {
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
 
   return (
     <HeroUINavbar className="mt-4" maxWidth="xl" position="sticky">
@@ -69,9 +44,11 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
-                className={clsx(
+                className={
+                  
+                  clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium hover:text-yellow-500",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium hover:scale-125 hover:text-yellow-500  transition-all",
                 )}
                 color="foreground"
                 href={item.href}
@@ -88,44 +65,34 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
+
                 {socials.map((social, index) => {
                     const Icon = social.Icon;
 
                     return (
-                      <Link
-                        key={index}
-                        aria-label={social.label}
-                        href={social.link}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <Icon className='w-5 h-5 text-gray-300 hover:scale-125 hover:text-yellow-500 transition-all' />
-                      </Link>
+                        <Link key={index} aria-label={social.label} href={social.link}>
+                            <Icon className='w-5 h-5 text-gray-400 hover:scale-125 hover:text-yellow-500  transition-all' />
+                        </Link>
                     );
                 })}
           <ThemeSwitch />
         </NavbarItem>
-
       </NavbarContent>
+
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
-        {searchInput}
+        {/* {searchInput} */}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
+          {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
+              <Link className="hover:scale-125 hover:text-yellow-500  transition-all"
+                color="foreground"
+                href={item.href} 
                 size="lg"
               >
                 {item.label}
