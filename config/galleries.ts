@@ -4,32 +4,32 @@
 export const inc_works = [
     {
         dsc: "dsc 01",
-        src: "/photos/img_01.jpg",
+        src: "/photos/img_01.jpeg",
         name: "Image 1"
     },
     {
         dsc: "dsc 02",
-        src: "/photos/img_02.jpg",
+        src: "/photos/img_02.jpeg",
         name: "Image 2"
     },
     {
         dsc: "dsc 03",
-        src: "/photos/img_03.jpg",
+        src: "/photos/img_03.jpeg",
         name: "Image 3"
     },
     {
         dsc: "dsc 04",
-        src: "/photos/img_04.jpg",
+        src: "/photos/img_04.jpeg",
         name: "Image 4"
     },
     {
         dsc: "dsc 05",
-        src: "/photos/img_05.jpg",
+        src: "/photos/img_05.jpeg",
         name: "Image 5"
     },
     {
         dsc: "dsc 06",
-        src: "/photos/img_06.jpg",
+        src: "/photos/img_06.jpeg",
         name: "Image 6"
     },
     {
@@ -39,7 +39,7 @@ export const inc_works = [
     },
     {
         dsc: "dsc 08",
-        src: "/photos/img_08.jpg",
+        src: "/photos/img_08.jpeg",
         name: "Image 8"
     },
     {
