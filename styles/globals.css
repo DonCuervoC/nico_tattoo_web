@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-merriweather: 'Merriweather', serif;
+    --font-great-vibes: 'Great Vibes', cursive;
+    --font-roboto-mono: 'Roboto Mono', monospace;
+    --font-monsieur-la-doulaise: 'Monsieur La Doulaise', cursive;
+    --font-mrs-saint-delafield: 'Mrs Saint Delafield', cursive;
+  }
