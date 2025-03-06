@@ -85,7 +85,7 @@ export const Navbar = () => {
         <NavbarMenuToggle className="text-orange-500  hover:text-red-500  transition-all" /> 
       </NavbarContent>
 
-      <NavbarMenu className="top-10 left-80 w-3/10 h-full"> 
+      <NavbarMenu className="top-10 left-64 w-3/10 h-full"> 
         {/* {searchInput} */}
         <div className="mx-4 mt-2 flex flex-col gap-2">
           <br/>
