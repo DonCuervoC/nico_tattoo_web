@@ -10,6 +10,7 @@ import { Card, CardFooter } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { useDisclosure } from "@heroui/modal";
 import ImageModal from "./image_modal";
+import { title } from "./primitives";
 // import Image from "next/image";
 
 interface ImageType {
@@ -54,7 +55,12 @@ export default function GalleryPage() {
                         />
                       </div>
                     </div>
-      <h1 className="text-4xl font-bold mb-8">Galería de Arte</h1>
+      {/* <h1 className="text-4xl font-bold mb-8">Galería de Arte</h1> */}
+                  <span className={title()}>
+                  <span className="text-white">Galería de </span>
+                    <span className={title({ color: "yellow" })}>Arte</span>
+                  </span>
+                  <br/>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         {inc_works.map((image, index) => (
           <Card key={index} isFooterBlurred className="overflow-hidden border-none" radius="lg">

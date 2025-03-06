@@ -82,12 +82,14 @@ export const Navbar = () => {
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
 
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle className="text-orange-500  hover:text-red-500  transition-all" /> 
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="top-10 left-80 w-3/10 h-full"> 
         {/* {searchInput} */}
         <div className="mx-4 mt-2 flex flex-col gap-2">
+          <br/>
+          <br/>
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link className="hover:scale-125 hover:text-yellow-500  transition-all"

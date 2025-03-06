@@ -1,35 +1,35 @@
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable import/order */
 /* eslint-disable prettier/prettier */
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
+// import { Link } from "@heroui/link";
+// import { Snippet } from "@heroui/snippet";
+// import { Code } from "@heroui/code";
+// import { button as buttonStyles } from "@heroui/theme";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+
 import Image from "next/image";
 
 export default function AboutPage() {
   return (
     <section className="flex flex-col items-center justify-center gap-4">
-        <div className="absolute inset-0 z-0">
-              <div className="absolute inset-0 
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 
               bg-gradient-radial
                from-black via-transparent
                 to-black opacity-10">
-                  
-                <Image
-                  alt="Background02"
-                  src="/background/backg-04.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                  quality={100}
-                  style={{ opacity: 0.9 }}
-                />
-              </div>
-            </div>
+
+          <Image
+            alt="Background02"
+            src="/background/backg-04.jpg"
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            style={{ opacity: 0.9 }}
+          />
+        </div>
+      </div>
       <div className="irelative z-10 inline-block max-w-4xl text-center">
         <span className={title()}>TATTOO&nbsp;</span>
         <span className={title({ color: "yellow" })}>ARTIST&nbsp;</span>
@@ -49,10 +49,10 @@ export default function AboutPage() {
               {siteConfig.description}
             </p>
             <span className={title()}>
-          <span className={title({ color: "yellow" })}>Arte</span> 
-          <span className="text-white"> que habla, tinta que </span> 
-          <span className={title({ color: "violet" })}>trasciende.</span>
-        </span>
+              <span className={title({ color: "yellow" })}>Arte</span>
+              <span className="text-white"> que habla, tinta que </span>
+              <span className={title({ color: "violet" })}>trasciende.</span>
+            </span>
           </div>
         </div>
         <br />
