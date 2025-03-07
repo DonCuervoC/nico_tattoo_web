@@ -8,12 +8,11 @@
 
 import { siteConfig } from "@/config/site";
 import { title } from "@/components/primitives";
-
 import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4">
+    <section className="flex flex-col items-center justify-center gap-4 p-4">
       {/* Sección principal con flexbox, centrado de elementos y espacio entre ellos */}
       <div className="absolute inset-0 z-0">
         {/* Contenedor absoluto que ocupa todo el espacio disponible */}
@@ -37,18 +36,19 @@ export default function AboutPage() {
         <br />
         <div className="flex flex-col md:flex-row justify-center items-start gap-4">
           {/* Contenedor flex con dirección de columna en pantallas pequeñas y fila en medianas y grandes */}
-          <div className="flex-shrink-0" style={{ width: '400px' }}>
-            {/* Contenedor de imagen con tamaño fijo */}
+          <div className="flex-shrink-0 w-full md:w-1/2">
+            {/* Contenedor de imagen con tamaño ajustable */}
             <Image
               alt="Nicolas-Cuervo"
               height={400} // Tamaño de la imagen
               src="/nicolas/IMG_2074.JPG" // Usando la URL pasada en la prop `src`
               width={400} // Tamaño de la imagen
+              className="w-full h-auto" // Ajuste responsivo
             />
           </div>
-          <div className="flex-shrink-0" style={{ width: '420px' }}>
-            {/* Contenedor de texto con tamaño fijo */}
-            <p className={`text-justify`} style={{ fontFamily: 'var(--font-roboto)' }}>
+          <div className="flex-shrink-0 w-full md:w-1/2">
+            {/* Contenedor de texto con tamaño ajustable */}
+            <p className="text-justify" style={{ fontFamily: 'var(--font-roboto)' }}>
               {siteConfig.description}
             </p>
             <span className={title()}>
