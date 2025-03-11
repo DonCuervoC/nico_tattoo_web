@@ -1,9 +1,9 @@
 /* eslint-disable import/order */
 /* eslint-disable react/jsx-sort-props */
 /* eslint-disable prettier/prettier */
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+// import { siteConfig } from "@/config/site";
+// import { title, subtitle } from "@/components/primitives";
+// import { GithubIcon } from "@/components/icons";
 import Image from "next/image";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
@@ -14,13 +14,12 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center gap-1 py-1 md:py-1">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-radial from-black via-transparent to-black opacity-20">
-          <Image
+        <Image
             alt="Background"
             src="/background/backg-02.jpg"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover', opacity: 0.9 }}
             quality={100}
-            style={{ opacity: 0.9 }}
           />
         </div>
       </div>

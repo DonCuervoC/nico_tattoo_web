@@ -12,7 +12,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 p-4">
+    <section className="flex flex-col items-center justify-center gap-4 p-2">
       {/* Sección principal con flexbox, centrado de elementos y espacio entre ellos */}
       <div className="absolute inset-0 z-0">
         {/* Contenedor absoluto que ocupa todo el espacio disponible */}
@@ -21,14 +21,13 @@ export default function AboutPage() {
           <Image
             alt="Background02"
             src="/background/backg-04.jpg"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: 'cover', opacity: 0.9 }}
             quality={100}
-            style={{ opacity: 0.9 }}
           />
         </div>
       </div>
-      <div className="relative z-10 inline-block max-w-4xl text-center">
+      <div className="relative z-10 inline-block max-w-6x1 text-center">
         {/* Contenedor principal con posición relativa, z-index, y centrado de texto */}
         <span className={title()}>TATTOO&nbsp;</span>
         <span className={title({ color: "yellow" })}>ARTIST&nbsp;</span>
@@ -36,7 +35,7 @@ export default function AboutPage() {
         <br />
         <div className="flex flex-col md:flex-row justify-center items-start gap-4">
           {/* Contenedor flex con dirección de columna en pantallas pequeñas y fila en medianas y grandes */}
-          <div className="flex-shrink-0 w-full md:w-1/2">
+          <div className="flex-shrink-0 w-full ">
             {/* Contenedor de imagen con tamaño ajustable */}
             <Image
               alt="Nicolas-Cuervo"
@@ -46,15 +45,16 @@ export default function AboutPage() {
               className="w-full h-auto" // Ajuste responsivo
             />
           </div>
-          <div className="flex-shrink-0 w-full md:w-1/2">
+          <div className="flex-shrink-0 w-full md:w-2/3">
             {/* Contenedor de texto con tamaño ajustable */}
             <p className="text-justify" style={{ fontFamily: 'var(--font-roboto)' }}>
               {siteConfig.description}
             </p>
             <span className={title()}>
-              <span className={title({ color: "yellow" })}>Arte</span>
-              <span className="text-white"> que habla, tinta que </span>
-              <span className={title({ color: "violet" })}>trasciende.</span>
+              <span className={title({ color: "yellow" })}>Arte </span>
+              <span className={title({ color: "blue" })}>que habla, tinta que</span>
+              {/* <span className="text-white"> que habla, tinta que </span> */}
+              <span className={title({ color: "violet" })}> trasciende.</span>
             </span>
           </div>
         </div>
