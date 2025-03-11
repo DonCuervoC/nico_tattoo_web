@@ -5,7 +5,7 @@
 // import { Snippet } from "@heroui/snippet";
 // import { Code } from "@heroui/code";
 // import { button as buttonStyles } from "@heroui/theme";
-
+"use client";
 import { siteConfig } from "@/config/site";
 import { title } from "@/components/primitives";
 import Image from "next/image";
@@ -51,10 +51,11 @@ export default function AboutPage() {
               {siteConfig.description}
             </p>
             <span className={title()}>
-              <span className={title({ color: "yellow" })}>Arte </span>
-              <span className={title({ color: "blue" })}>que habla, tinta que</span>
+              <span className={title({ color: "yellow" })}>Arte&nbsp;</span>
+              {/* <span className={title({ color: "blue" })}>que habla, tinta que</span> */}
+              <span className={title()}>que habla, tinta que&nbsp;</span>
               {/* <span className="text-white"> que habla, tinta que </span> */}
-              <span className={title({ color: "violet" })}> trasciende.</span>
+              <span className={title({ color: "violet" })}> trasciende.&nbsp;</span>
             </span>
           </div>
         </div>
